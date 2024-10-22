@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="review-container">
+        <h2>Product Review</h2>
+        <hr>
+        <form id="reviewForm">
+            <label for="productName">Product Name</label>
+            <select id="productName" required>
+                <option value="" disabled selected>Choose a Product ...</option>
+                <option value="Product 1">Product 1</option>
+                <option value="Product 2">Product 2</option>
+                <option value="Product 3">Product 3</option>
+            </select>
+
+            <label>Overall Rating</label>
+            <div class="rating">
+                <input type="radio" name="rating" id="star5">
+                <label for="star5" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="star4">
+                <label for="star4" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="star3">
+                <label for="star3" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="star2">
+                <label for="star2" class="fas fa-star"></label>
+                <input type="radio" name="rating" id="star1">
+                <label for="star1" class="fas fa-star"></label>
+            </div>
+
+            <label for="installDate">Date of Installation</label>
+            <input type="date" id="installDate" required>
+
+            <label>Which features did you find useful in the product? (Check all that apply)</label>
+            <div class="audience">
+                <label for="durability"><input type="checkbox" id="durability" value="Durability">Durability</label>
+                <label for="easeOfUse"><input type="checkbox" id="easeOfUse" value="Ease of Use">Ease of Use</label>
+                <label for="performance"><input type="checkbox" id="performance" value="Performance">Performance</label>
+                <label for="design"><input type="checkbox" id="design" value="Design">Design</label>
+            </div>
+
+            <label for="writtenReview">Written Review (Optional)</label>
+            <textarea id="writtenReview"></textarea>
+
+            <label for="name">Your Name (Optional)</label>
+            <input type="text" id="name">
+
+            <button type="submit">Post Review</button>
+        </form>
+        <div id="confirmeMessage"></div>
+        <hr>
+        <footer>
+            <p>&copy; <span id="currentyear"></span> IRIE, Cote D'Ivoire.</p>
+            <p id="lastModified"></p>
+        </footer>
+    </div>
+
+    <script src="scripts/form.js" defer></script>
+</body>
+</html>

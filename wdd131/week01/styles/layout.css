@@ -1,0 +1,42 @@
+body {
+    display: grid;
+    font-family: Arial, sans-serif;
+    height: 100vh; 
+}
+header, nav, main, aside, footer{
+    border: 0px;
+    padding: 10px;
+    margin: 5px;
+}
+header{
+    background-color: #fca82a;
+    text-align: center;
+    grid-column: 1/4;
+}
+nav{
+    display: flex;
+    background-color: #434443;
+    text-align: center;
+    grid-column: 1/4;
+}
+nav ul il a{
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    justify-content: auto;
+    padding: 9rem;
+    color: #f9f9f9;
+}
+main{
+    background-color: #f9f9f9;
+    grid-column: 1/3;
+}
+aside{
+    background-color: #0f64ed;
+    padding: 6rem;
+    grid-column: 3/4;
+}
+footer{
+    background-color: #fe1f1f;
+    text-align: center;
+    grid-column: 1/4;
+}

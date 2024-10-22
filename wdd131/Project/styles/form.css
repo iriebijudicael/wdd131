@@ -1,0 +1,127 @@
+
+body {
+    font-family: "Lexend", sans-serif;
+    font-size: 1.2rem;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.review-container {
+    max-width: 500px;
+    font-weight: 5rem;
+    margin: 0 auto;
+    padding: 25px;
+    background-color: #e9e7e7;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+hr {
+    height: 3px;
+    margin: 35px;
+    background: #3a0037;
+}
+h2 {
+    text-align: center;
+    color: #3a0037;
+}
+
+label {
+    display: block;
+    font-weight: 5rem;
+    margin: 10px 0 5px;
+}
+
+select, input[type="text"], textarea, input[type="date"] {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 10px 0.1px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 10px;
+    background-color: #3a0037;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5e0469;
+}
+.rating {
+    display: flex;
+    padding: 10px 7rem;
+    gap: 25px;
+}
+
+.rating input[type="radio"] {
+    display: none;
+    
+}
+
+.rating label {
+    font-size: 1.1rem;
+    color: gray;
+    padding: 6px;
+    cursor: pointer;
+}
+
+input:not(:checked )~ label 
+input:not(:checked )~ label:hover {
+    color: gray;
+}
+input:checked ~ label {
+    color: #fd4;
+}
+
+.audience input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#confirmeMessage {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(4, 129, 4);
+}
+footer p {
+    color: #3a0037;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+
+@media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+    .review-container {
+      max-width: 90%; /* Make the container more responsive on smaller screens */
+    }
+  
+    .rating {
+      display: flex; 
+      padding: 5px 50px;
+      gap: 5px;
+    }
+  
+    .star-rating label {
+      font-size: 1.1rem; /* Adjust font size for better readability */
+    }
+    select, input[type="text"], textarea, input[type="date"] {
+        width: 100%;
+        font-size: 1.1rem;
+        padding: 10px 0.1px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+  
+  }
