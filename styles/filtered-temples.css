@@ -1,0 +1,139 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", system-ui;
+}
+header{
+    background: #59b6eb;
+}
+li{
+    list-style: none;
+}
+h1{
+    font-size: 2rem;
+    color: #fff;
+}
+nav a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.3rem; 
+}
+.navbar{
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+.nav-menu{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   gap: 70px;
+}
+.nav-link{
+    transition: 0.7s ease;
+}
+ul a:hover{
+    background-color: #ee740a;
+    padding: 16px; 
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    background-color: #fff; 
+}
+
+.temple-card {
+    display: grid;
+    padding: 10px;
+    grid-template-columns:repeat(3, 1fr);
+    gap: 10px;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+main h2{
+    font-size: 2rem;
+    text-align: center;
+}
+/*.temple-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}*/
+  
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #edf4f7;
+    border: 1px solid #bbb;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+h3 p {
+    text-align: center;
+}
+  
+.temple-card h3 {
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 20px;
+}
+  
+.temple-card p {
+    margin-bottom: 10px;
+}
+  
+.temple-card .label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+  
+.temple-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+  
+section img {
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border: 1px solid #bbb;
+    box-shadow: 0 0 3px #333;
+}
+img {
+    overflow: clip;
+    overflow-clip-margin: content-box;
+}
+
+footer {
+    background-color: #2b8fd2;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+}
+footer p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}

@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+a {
+    color: #f3f6f9;
+    text-decoration: none;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+nav a:hover {
+    background-color: #30e1b2;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px;
+}
+.card-3 a:hover {
+    background-color: #30e1b2;
+    color: #fff;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+.card-img {
+    border: 10px solid #151516;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;    
+}
+#card-img:hover {
+    opacity: .6;
+    transform: scale(1.1);    
+}
+
+/* Layout Structure */
+header, main, footer {
+    
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 0, 0, 0.582);
+    position: fixed;
+    width: 100%;
+    border-bottom: 2px solid #ddd;
+    grid-column: 1/4;
+    z-index: 10;
+}
+h1{
+    font-size: 2.5rem;
+    text-align: center;
+    color: rgb(249, 173, 73);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav ul li {
+    padding: 0.8rem 1.3rem;
+}
+
+nav ul li a {
+    font-size: 1.3rem;
+}
+#card-img {
+    background-color:  rgb(248, 248, 243);
+    padding: 100px;
+}
+.card-2 ul li a {
+    font-size: 1.5rem;
+}
+.card-3 ul li a {
+    font-size: 1.5rem;
+}
+.card-2 p {
+    font-family: Wix Madefor Text, sans-serif;
+    text-align: left;
+    font-size: 1.7rem;
+    margin: auto;
+}
+/*#image {
+    max-width: 100%;
+    width: 50px;
+    height: auto;
+    border-radius: 1.0rem;
+}*/
+.card-2 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.2rem;
+}
+.card-3 img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.2rem;
+}
+/* Main Content */
+main {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.card-2 {
+    background: linear-gradient(rgb(249, 173, 73),  rgb(249, 173, 73)  180px, #30e1b2 50px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    grid-column: 1/3;
+}
+.card-3 {
+    background-color: rgb(182, 182, 171);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    grid-column: 3/4;
+}
+
+/* Footer */
+footer {
+    background-color: #130202;
+    border-top: 2px solid #ddd;
+    padding: 3rem;
+    font-size: 1.4rem;
+    grid-column: 1/4;
+}
+
+footer p {
+    color: #fdfbfb;
+    margin: 0.2rem 0;
+}

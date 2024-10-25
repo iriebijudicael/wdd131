@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Media query learning activity example page.">
+        <meta name="author" content="Irie Bi Judicael Elvis">
+        <title>Temple Album</title>
+        <!-- Linking the two CSS files -->
+        <link rel="stylesheet" href="styles/filtered-temples.css">
+        <link rel="stylesheet" href="styles/filtered-temples-large.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap&profile=css3&usermedium=all&warning=1&vextwarning=&lang=en" rel="stylesheet">
+    </head>
+    <body>
+
+        <!---------  Header  -------->
+        <header>
+            <nav class="navbar">
+                <h1>Temple Album</h1>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Old</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">New</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Large</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Small</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
+
+        <!--  Main  -->
+        <main>
+            <h2>Home</h2>
+            <div class="temple-card">
+            </div>
+        </main>
+
+        <!--  Footer  -->
+        <footer>
+            <p>&copy; <span id="currentyear"></span> IRIE, Cote D'Ivoire.</p>
+            <p id="lastModified"></p>
+        </footer>
+
+        <!-- JavaScript for resizing images -->
+        <script src="scripts/filtered-temples.js" defer></script>
+    </body>
+</html>
