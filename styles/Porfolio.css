@@ -251,7 +251,7 @@ body {
     }
 } 
 
-/*--------- Media queri --------*/
+/*--------- Media queri ---------*/
 @media screen and (max-width: 400px) {
     .container {
         padding: 10px;
