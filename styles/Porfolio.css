@@ -197,7 +197,7 @@ body {
 }
 
 
-/*----------------------------*/
+/*------------------------------*/
 /*--------- Media queri --------*/
 @media screen and (max-width: 1200px) {
     .card-skills {
@@ -234,7 +234,7 @@ body {
     }
 }
 
-/*--------- Media queri --------*/
+/*--------- Media queri ----------*/
 @media screen and (max-width: 768px) {
     .card {
         grid-column: 1;
