@@ -1,0 +1,97 @@
+:root {
+    --primary-color: #30e1b2;
+    --secondary-color: #f3f6f9;
+    --font-color: #151516;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333333;
+    padding: 1rem;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    gap: 1rem;
+}
+
+
+nav ul li {
+    padding: 0.8rem 1.3rem;
+}
+
+nav li a {
+    font-size: 1.3rem;
+    margin: 6rem;
+}
+
+
+/* Layout Structure */
+h1, h2 {
+    color: #fefefe;
+    text-align: start;
+}
+main h2 {
+    color: #636363;
+}
+a {
+    color: #f3f6f9;
+    text-decoration: none;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    background: #000000;
+}
+
+
+/* Main Content */
+main {
+    padding: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1px;
+}
+
+.main-card {
+    background: #cccccc;
+    padding: 13rem;
+    grid-column: 1/3;
+}
+.aside-card {
+    background-color: rgb(182, 182, 171);
+    padding: 4rem;
+    grid-column: 3/4;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    border-top: 2px solid #ddd;
+    padding: 3rem;
+    font-size: 1.4rem;
+    grid-column: 1/4;
+}
+
+footer p {
+    color: #fdfbfb;
+    margin: 0.2rem 0;
+}
