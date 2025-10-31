@@ -13,6 +13,9 @@ body {
 }
 
 /* Header */
+header {
+    font-family: "Ubuntu Condensed", sans-serif;
+}
 header h1 {
     background-color: #faf2f2;
     width: 100%;
