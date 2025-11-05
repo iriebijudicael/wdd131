@@ -1,0 +1,42 @@
+/*body {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  header, main, footer {
+    max-width: 500px;
+    margin: 1rem auto;
+    border: 1px solid #bbb;
+    padding: 1rem;
+    background-color: #3795fa;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+  }
+  
+  section {
+    padding: 1rem;
+    background-color: #fff;
+  }*/
+
+
+
+  @media screen and (min-width: 640px){
+    h1 {
+      font-size: 2.5rem;
+      margin: 1rem;
+      color: rgb(251, 251, 252);
+    }
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+    }
+    header {
+      background-color: #000;
+      color: #fff;
+    }
+    
+  }
