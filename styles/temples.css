@@ -8,17 +8,17 @@ body{
     font-family: "Roboto", system-ui;
 }
 header{
-    background: #59b6eb;
+    background: #3dc9ab;
 }
 li{
     list-style: none;
 }
 h1{
     font-size: 2rem;
-    color: #fff;
+    color: #ffffff;
 }
 nav a{
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     font-size: 1.3rem; 
 }
@@ -53,7 +53,7 @@ ul a:hover{
     margin: 5px auto;
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
-    background-color: #fff; 
+    background-color: #ffffff; 
 }
 
 .images-box {
@@ -66,7 +66,9 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    cursor: pointer;
 }
 main h2{
     font-size: 2rem;
@@ -74,7 +76,11 @@ main h2{
 }
 .figure img {
     max-width: 100%;
-    height: auto;
+    height: 44vh;
+}
+.figure img:hover {
+    border: 2px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(211, 126, 126, 0.2);
 }
 .figure {
     text-align: center;
@@ -82,8 +88,8 @@ main h2{
 }
 
 footer {
-    background-color: #2b8fd2;
-    color: white;
+    background-color: #3dc9ab;
+    color: #ffffff;
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;

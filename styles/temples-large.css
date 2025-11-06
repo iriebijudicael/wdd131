@@ -1,4 +1,8 @@
 @media (max-width: 768px){
+    h1 {
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
     .hamburger {
         display: block;
     }
@@ -17,7 +21,7 @@
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: #efc41b;
+        background-color: #f5d34d;
         width: 100%;
         text-align: center;
         transition: 0.1s;
@@ -32,7 +36,21 @@
 
     .images-box {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 5px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
     }
+    
+}
+
+@media (max-width: 320px){
+    .figure img:hover {
+       border: 2px solid #140404;
+       box-shadow: 0 4px 8px rgba(211, 126, 126, 0.2);
+    }
+    .images-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+    }
+
 }
