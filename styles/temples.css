@@ -7,7 +7,7 @@ body{
     font-family: "Roboto", system-ui;
 }
 header{
-    background-color: rgb(24, 94, 79); /* Darker teal */
+    background-color: rgb(24, 94, 79); 
 }
 header h1 {
     color: rgb(255, 255, 255);
@@ -40,12 +40,12 @@ nav a{
 .nav-link{
     transition: 0.7s ease;
     color: #ffffff;
-    background-color: rgb(24, 94, 79); /* Darker teal background */
+    background-color: rgb(24, 94, 79); 
     padding: 8px 16px;
     border-radius: 4px;
 }
 .nav-link:hover{
-    background-color: #993d00; /* Darker orange for better contrast */
+    background-color: #993d00; 
     color: #ffffff;
 }
 ul a:hover{
