@@ -1,7 +1,7 @@
 :root {
   --primary-color: #30e1b2;
   --secondary-color: #fea435;
-  --background-image: url("../images/5emepont.webp"); 
+  --background-image: url("../images/zaouli_mask.webp"); 
 }
 * {
   margin: 0;
@@ -11,7 +11,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  /*background-color: #39b23d; Matches the red background in the image */
+  /* background-color: #39b23d;  */
   color: white;
   text-align: center;
 }
@@ -27,27 +27,33 @@ h1 {
   margin-bottom: 20px;
 }
 
-.hero {
-  background-image: url("../images/5emepont.webp");
+#hero {
+  background-image: url("../images/zaouli_mask.webp");
   background-size: cover;
   background-position: center;
   padding: 40px;
   display: flex;
   justify-content: space-between;
-  height: 100vh;
+  height: auto;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
   animation: fade-in 1s; 
 }
 
-@keyframes fade-in {
+/* @keyframes fade-in {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
+} */
+
+.hero-content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 20px;
 }
 
 .data-box, .weather-box {
@@ -55,7 +61,8 @@ h1 {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1.5rem;
   border-radius: 8px;
-  width: 20%;
+  /* max-width: 45%; */
+  height: auto;
   color: #333;
 }
 .weather-box::after {
@@ -64,9 +71,9 @@ h1 {
   color: #333;
 }
 h2 {
-  background-color: #30e1b2; /* Green color for headings */
-  padding: 15px;
-  margin-bottom: 15px;
+  background-color: #30e1b2; 
+  padding: 12px;
+  margin-bottom: 12px;
   color: aliceblue;
   left: 30px;
 }
@@ -87,7 +94,7 @@ footer {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   main {
       flex-direction: column;
       align-items: center;
@@ -96,8 +103,8 @@ footer {
     background-image: url("../images/pontdeliane.webp"); 
   }
 
-  .data-box, .weather-box {
+  /* .data-box, .weather-box {
       width: 100%;
       margin-top: 100%;
-  }
+  } */
 }
