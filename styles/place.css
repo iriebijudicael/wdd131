@@ -1,7 +1,7 @@
 :root {
   --primary-color: #30e1b2;
   --secondary-color: #fea435;
-  --background-image: url("../images/zaouli_mask.webp"); 
+   
 }
 * {
   margin: 0;
@@ -11,59 +11,75 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  /* background-color: #39b23d;  */
-  color: white;
+  color: #ffffff;
   text-align: center;
 }
 
 header {
-  background: linear-gradient(rgb(249, 173, 73)  110px, var(--primary-color) 50px);
-  padding: 1.5rem;
+  background: var(--secondary-color);
+  padding: 1.3rem;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 2rem;
+  font-weight: bold;
   color: white;
   margin-bottom: 20px;
 }
 
 #hero {
-  background-image: url("../images/zaouli_mask.webp");
+  position: relative;
+  background-image: url("../images/5eme-pond.webp");
   background-size: cover;
   background-position: center;
-  padding: 40px;
-  display: flex;
-  justify-content: space-between;
-  height: auto;
-  align-items: center;
+  padding: 20px;
+  object-fit: cover;
   flex-wrap: wrap;
-  gap: 20px;
   animation: fade-in 1s; 
 }
 
-/* @keyframes fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
-} */
-
-.hero-content {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-gap: 20px;
 }
 
-.data-box, .weather-box {
+.hero-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 100%;
+  grid-gap: 20rem;
+  margin-bottom: 10rem;
+}
+
+.data-box {
+  position: relative;
+  bottom: 0.1rem;
   font-family: "Roboto", system-ui;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1.5rem;
   border-radius: 8px;
-  /* max-width: 45%; */
-  height: auto;
+  width: 85%; 
+  height: 10px auto;
   color: #333;
+  grid-column: 1/2;
+}
+.weather-box {
+  position: relative;
+  top: 18rem;
+  font-family: "Roboto", system-ui;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem;
+  border-radius: 8px;
+  height: 45vh;
+  color: #333;
+  grid-column: 3/4;
 }
 .weather-box::after {
   content: '⛅️';
@@ -71,8 +87,10 @@ h1 {
   color: #333;
 }
 h2 {
+  position: relative;
+  left: 18rem;
   background-color: #30e1b2; 
-  padding: 12px;
+  padding: 10px;
   margin-bottom: 12px;
   color: aliceblue;
   left: 30px;
@@ -84,27 +102,51 @@ ul {
 
 ul li {
   margin-bottom: 20px;
-  font-size: 17px;
+  font-size: 0.9rem;
 }
 
 footer {
   background-color: #fea435;
   padding: 40px;
   color: white;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
-@media screen and (min-width: 768px) {
-  main {
-      flex-direction: column;
-      align-items: center;
-  }
-  .hero {
-    background-image: url("../images/pontdeliane.webp"); 
+/* Tablet and medium screens */
+/* @media screen and (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 900px;
   }
 
-  /* .data-box, .weather-box {
-      width: 100%;
-      margin-top: 100%;
-  } */
-}
+  .data-box,
+  .weather-box {
+    width: 45%;
+  }
+
+  #hero {
+    background-image: url("../images/pontdeliane.webp");
+  }
+} */
+
+/* Large screens / desktops */
+/* @media screen and (min-width: 1200px) {
+  .hero-content {
+    max-width: 1200px;
+    gap: 5rem;
+  }
+
+  .data-box,
+  .weather-box {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+  #hero {
+    padding: 40px;
+    background-position: center center;
+  }
+} */
