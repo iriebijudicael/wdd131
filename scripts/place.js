@@ -1,31 +1,28 @@
-document.addEventListener("DOMContentLoaded", function() {
-  // Function to calculate wind chill
-  function calculateWindChill(temp, windSpeed) {
-      // Check if conditions are met for wind chill calculation
-      if (temp <= 10 && windSpeed > 4.8) {
-          // Wind Chill Formula in °C
-          return (13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16)).toFixed(1);
-      } else {
-          return "N/A"; // Not Applicable
-      }
+// Static values matching your Weather section
+const temperature = 10;      // °C
+const windSpeed = 12;        // km/h
+
+// One-line wind chill function (Celsius formula)
+function calculateWindChill(t, s) {
+  return Math.round(
+    13.12 + 0.6215 * t - 11.37 * Math.pow(s, 0.16) + 0.3965 * t * Math.pow(s, 0.16)
+  );
+}
+
+// Only call calculateWindChill if valid
+function displayWindChill() {
+  const windChillElement = document.getElementById("windchill");
+
+  // Valid wind chill conditions
+  if (temperature <= 10 && windSpeed > 4.8) {
+    windChillElement.textContent = `${calculateWindChill(temperature, windSpeed)}°C`;
+  } else {
+    windChillElement.textContent = "N/A";
   }
+}
 
-  // Static values for temperature and wind speed (for this example)
-  const temperature = 23; // °C
-  const windSpeed = 5;    // km/h
+document.addEventListener("DOMContentLoaded", displayWindChill);
 
-  // Get the weather box element and display the wind chill
-  const weatherBox = document.querySelector('.weather-box ul');
-  const windChill = calculateWindChill(temperature, windSpeed);
-
-  // Update the weather box content with the calculated wind chill
-  weatherBox.innerHTML = `
-      <li><strong>Temperature:</strong> ${temperature}°C</li>
-      <li><strong>Conditions:</strong> Partly Cloudy</li>
-      <li><strong>Wind:</strong> ${windSpeed} km/h</li>
-      <li><strong>Wind Chill:</strong> ${windChill}°C</li>
-  `;
-});
 
 
 // Dynamically populate the current year in the footer
