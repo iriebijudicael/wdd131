@@ -1,6 +1,6 @@
 :root {
   --primary-color: #30e1b2;
-  --secondary-color: #fea435;
+  --secondary-color: #f8b62d;
    
 }
 * {
@@ -22,10 +22,18 @@ header {
   margin-bottom: 1rem;
 }
 
+/* Fix: improve contrast for header title on yellow background */
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222222; /* darker text for sufficient contrast on var(--secondary-color) */
+  margin-bottom: 20px;
+}
+
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
@@ -100,10 +108,16 @@ ul li {
 p {
   margin-bottom: 20px;
   font-size: 0.9rem;
+  color: #222222; 
+}
+
+span {
+  color: #222222; 
 }
 
 footer {
-  background-color: #fea435;
+  font-weight: 600;
+  background-color: var(--secondary-color);
   padding: 40px;
   color: #ffffff;
   margin-top: auto;
@@ -127,10 +141,10 @@ footer {
   h2 {
     position: relative;
     left: 18rem;
-    background-color: #30e1b2; 
+    background-color: var(--primary-color); 
     padding: 10px;
     margin-bottom: 12px;
-    color: aliceblue;
+    color: #ffffff;
     left: 30px;
   }
 
@@ -152,7 +166,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1.5rem;
   border-radius: 8px;
-  width: 70%; 
+  width: 50%; 
   height: auto;
   color: #333;
   grid-column: 1 / 2;
@@ -165,7 +179,7 @@ footer {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 1.5rem;
   border-radius: 8px;
-  width: 60%;
+  width: 50%;
   height: 45vh;
   color: #333;
   grid-column: 2 / 3;
@@ -185,6 +199,8 @@ footer {
 
   footer p {
     font-size: 1rem;
+    font-weight: 600;
+    color: #222222;
   }
 }
 
