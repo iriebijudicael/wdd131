@@ -3,11 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Media query learning activity example page.">
+        <meta name="description" content="The Responsive Country  Home page.">
         <meta name="author" content="Irie Bi Judicael Elvis">
         <title>Ivory Coast</title>
         <link rel="stylesheet" href="styles/place.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 
@@ -20,7 +21,12 @@
     </header>
     
     <main>
-        <img src="images/mask.webp" alt="Ivory Coast Flag" class="flag-image" width="250" height="400">
+        <picture id="reponsive-img">
+            <source srcset="images/mask.webp" media="(min-width: 1000px)">
+            <source srcset="images/mask.webp" media="(min-width: 550px)">
+            <img src="images/mask.webp" alt="Ivory Coast Mask" width="250" height="400">
+        </picture>
+        
         <div id="hero">
             <!-- Data Section -->
           <div class="hero-content">

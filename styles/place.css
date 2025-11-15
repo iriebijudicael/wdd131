@@ -75,10 +75,12 @@ h1 {
 .wide-icon {
   display: none;
 }
-
 svg {
   width: 80px;
   height: 80px;
+}
+#reponsive-img {
+  display: inline;
 }
 h2 {
   padding: 10px;
@@ -117,7 +119,7 @@ footer {
     margin-bottom: 10rem;
   }
 
-  .flag-image {
+  #reponsive-img {
     display: none;
   }
 
