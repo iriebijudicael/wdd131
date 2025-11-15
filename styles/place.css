@@ -86,7 +86,12 @@ svg {
 }
 
 
-.cls-1{fill:#f8b62d;}.cls-1,.cls-2{stroke:#231815;stroke-miterlimit:10;}.cls-2,.cls-4{fill:#231815;}.cls-3{fill:#fff;}
+.cls-1{fill:#f8b62d;}
+.cls-1,
+.cls-2{stroke:#231815;stroke-miterlimit:10;}.cls-2,
+.cls-4{fill:#231815;}.cls-3{fill:#fff;}
+
+
 #reponsive-img {
   display: inline;
 }
