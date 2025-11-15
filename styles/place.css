@@ -72,6 +72,7 @@ h1 {
   color: #333;
   border-top: 1px solid #ece6e6;
 }
+
 .wide-icon {
   display: none;
 }
@@ -190,11 +191,11 @@ footer {
     gap: 5rem;
   }
 
-  /* .data-box,
-  .weather-box {
-    padding: 2rem;
-    font-size: 1rem;
-  } */
+  .weather-box::after {
+  content: '⛅️';
+  font-size: 25px;
+  color: #333;
+}
 
   #hero {
     padding: 40px;
