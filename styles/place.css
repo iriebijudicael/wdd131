@@ -1,7 +1,6 @@
 :root {
   --primary-color: #30e1b2;
   --secondary-color: #f8b62d;
-   
 }
 * {
   margin: 0;
@@ -22,11 +21,11 @@ header {
   margin-bottom: 1rem;
 }
 
-/* Fix: improve contrast for header title on yellow background */
+
 header h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: #222222; /* darker text for sufficient contrast on var(--secondary-color) */
+  color: #222222; 
   margin-bottom: 20px;
 }
 
@@ -38,9 +37,6 @@ h1 {
 }
 
 #hero {
-  /* background-image: url("../images/pond-liane.webp");
-  background-size: cover;
-  background-position: center; */
   padding: 10px;
   object-fit: cover;
   flex-wrap: wrap;
