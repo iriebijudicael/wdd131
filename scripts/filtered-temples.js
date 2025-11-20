@@ -23,7 +23,7 @@ const temples = [
     {
       templeName: "Abidjan Ivory Coast",
       location: "Abidjan",
-      dedicated: "2018, November, 8",
+      dedicated: "2025, May, 25",
       area: 11500,
       imageUrl:
       "https://churchofjesuschristtemples.org/assets/img/temples/abidjan-ivory-coast-temple/abidjan-ivory-coast-temple-1108-main.jpg"  
@@ -95,9 +95,17 @@ const temples = [
     // Add more temple objects here...
   ];
 
-createTempleCard();  
+createTempleCard(temples);  
 
+
+// Load everything on start
+displayTemples(temples);
+// const filtered = document.querySelector("#nav-link");
+// filtered.addEventListener("click", () => {
+//   createTempleCard(temples.filter(t => t.dedicated < 1900))
+// });
 function createTempleCard() {
+    document.querySelector(".temple-card").innerHTML = "";
     temples.forEach(temple => {
       const card = document.createElement("section");
       const name = document.createElement("h3");
@@ -107,8 +115,8 @@ function createTempleCard() {
       const img = document.createElement("img");
 
       name.textContent = temple.templeName;
-      location.innerHTML = `<span class="label">Location</span> ${temple.location}`;
-      dedication.innerHTML = `<span class="label">Dedicated</span> ${temple.dedication}`;
+      location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+      dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
       area.innerHTML = `<span class="label">Size:</span> ${temple.area} sp ft`;
       img.setAttribute("src", temple.imageUrl);
       img.setAttribute("alt", "${temple.templeName} Temple");
@@ -123,3 +131,41 @@ function createTempleCard() {
       document.querySelector(".temple-card").appendChild(card);
     });
 }
+
+
+// --------------------
+// Filters
+// --------------------
+function applyFilter(type) {
+  let filtered;
+
+  switch(type) {
+    case "old":
+      filtered = temples.filter(t => t.dedicated < 1900);
+      title.textContent = "Old Temples (Before 1900)";
+      break;
+
+    case "new":
+      filtered = temples.filter(t => t.dedicated > 2000);
+      title.textContent = "New Temples (After 2000)";
+      break;
+
+    case "large":
+      filtered = temples.filter(t => t.area > 90000);
+      title.textContent = "Large Temples (> 90,000 sq ft)";
+      break;
+
+    case "small":
+      filtered = temples.filter(t => t.area < 10000);
+      title.textContent = "Small Temples (< 10,000 sq ft)";
+      break;
+
+    default:
+      filtered = temples;
+      title.textContent = "Home";
+      break;
+  }
+
+  displayTemples(filtered);
+}
+
