@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+
+<header class="review-header">
+    <h1>Thank You for Your Review!</h1>
+</header>
+
+<main class="review-confir">
+    <p>Your review has been submitted successfully.</p>
+
+    <p><strong>Total reviews submitted from this device:</strong> 
+       <span id="reviewCount"></span>
+    </p>
+</main>
+
+<footer class="review-footer">
+    <p>&copy; <span id="year"></span> Irie Judicael Elvis</p>
+</footer>
+
+<script>
+    // LOCALSTORAGE REVIEW COUNTER
+    let count = Number(localStorage.getItem("reviewCount")) || 0;
+    count++;
+    localStorage.setItem("reviewCount", count);
+
+    document.getElementById("reviewCount").textContent = count;
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

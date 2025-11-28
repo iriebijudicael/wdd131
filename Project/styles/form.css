@@ -25,7 +25,9 @@ h2 {
     text-align: center;
     color: #3a0037;
 }
-
+input {
+    text-align: start;
+}
 label {
     display: block;
     font-weight: 5rem;
@@ -50,7 +52,7 @@ button {
     width: 100%;
     padding: 10px;
     background-color: #3a0037;
-    color: white;
+    color: #ffffff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -61,25 +63,28 @@ button:hover {
 }
 .rating {
     display: flex;
-    padding: 10px 7rem;
-    gap: 25px;
+    padding: 10px;
+    gap: 1rem;
 }
 
 .rating input[type="radio"] {
-    display: none;
+    display: inline-block;
+    color: #000;
     
 }
 
 .rating label {
+    top: 5px;
     font-size: 1.1rem;
-    color: gray;
+    color: #000000;
     padding: 6px;
+    text-align: center;
     cursor: pointer;
 }
 
-input:not(:checked )~ label 
+
 input:not(:checked )~ label:hover {
-    color: gray;
+    color: #bbb;
 }
 input:checked ~ label {
     color: #fd4;
@@ -92,8 +97,30 @@ input:checked ~ label {
 #confirmeMessage {
     margin-top: 20px;
     text-align: center;
-    color: rgb(4, 129, 4);
+    color: #30d630;
 }
+
+/* ------------------------------
+   REVIEW PAGE (review.html)
+--------------------------------*/
+.review-confir p {
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.review-confir {
+    background: #e9e7e7;
+    max-width: 500%;
+    padding: 15px 10rem;
+}
+main span {
+    font-weight: 700;
+    color: #30d630;
+}
+.review-footer {
+    margin-top: 20rem;
+}
+
 footer p {
     color: #3a0037;
     text-align: center;
@@ -101,9 +128,9 @@ footer p {
 }
 
 
-@media screen and (max-width: 768px) { /* Adjust breakpoint as needed */
+@media screen and (max-width: 768px) { 
     .review-container {
-      max-width: 90%; /* Make the container more responsive on smaller screens */
+      max-width: 90%; 
     }
   
     .rating {
