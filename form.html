@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your experience with our products. Complete this brief customer feedback form to rate your purchase, review features, and help us improve.">
+    <meta name="author" content="Irie Bi Judicael Elvis">
     <title>Product Review</title>
     <link rel="stylesheet" href="styles/form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,9 +14,10 @@
     <script src="scripts/form.js" defer></script>
 </head>
 <body>
+   <header>
+      <h2>Product Review</h2>
+   </header>
     <div class="review-container">
-        <h2>Product Review</h2>
-        <hr>
         <form id="reviewForm" method="get" action="review.html">
             <label for="productName">Product Name</label>
             <select id="productName" required>
@@ -25,7 +28,7 @@
             </select>
 
              <!-- Overall Rating -->
-            <fieldset class="rating-group">
+            <select class="rating-group">
                 <legend>Overall Rating</legend>
                 <div class="rating">
                    <label> ☆<input type="radio" name="rating" value="1" required></label>
@@ -34,7 +37,7 @@
                    <label> ☆☆☆☆<input type="radio" name="rating" value="4"></label>
                    <label> ☆☆☆☆☆<input type="radio" name="rating" value="5"></label>
                 </div>
-            </fieldset>
+            </select>
 
             <label for="installDate">Date of Installation</label>
             <input type="date" id="installDate" required>
