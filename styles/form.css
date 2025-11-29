@@ -31,6 +31,12 @@ header h2 {
 input {
     text-align: start;
 }
+#submitBtn {
+    font-weight: 700;
+    background: #3a0037;
+    color: #ffffff;
+    padding: 10px;
+}
 label {
     display: block;
     font-weight: 5rem;
@@ -106,8 +112,12 @@ input:checked ~ label {
 /* ------------------------------
    REVIEW PAGE (review.html)
 --------------------------------*/
+.review-header {
+    background: none;
+    max-width: 900%;
+}
 .review-confir p {
-    margin-bottom: 12px;
+    margin-bottom: 8px;
     font-size: 1rem;
 }
 
