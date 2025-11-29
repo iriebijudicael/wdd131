@@ -64,7 +64,7 @@ document.getElementById("reviewForm").addEventListener("submit", function(event)
 // DISPLAY ERROR MESSAGES
 // ----------------------------------------------------------
 function displayErrors(errorList) {
-    let box = document.getElementById("confirmeMessage");
+    let box = document.getElementById("confirmMessage");
 
     box.style.color = "#b30000";
     box.style.borderLeft = "5px solid #b30000";
