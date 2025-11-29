@@ -9,7 +9,7 @@ body {
 
 .review-container {
     max-width: 500px;
-    font-weight: 5rem;
+    font-weight: 600;
     margin: 0 1rem;
     padding: 25px;
     background-color: #e9e7e7;
@@ -39,7 +39,7 @@ input {
 }
 label {
     display: block;
-    font-weight: 5rem;
+    font-weight: 600;
     margin: 10px 0 5px;
 }
 
