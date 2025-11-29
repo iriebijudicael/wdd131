@@ -67,11 +67,11 @@ button:hover {
 .rating {
     display: flex;
     padding: 10px;
-    gap: 0.1rem;
+    gap: 1rem;
 }
 
 .rating input[type="radio"] {
-    /* display: flex; */
+    display: inline-block;
     color: #000;
     
 }
