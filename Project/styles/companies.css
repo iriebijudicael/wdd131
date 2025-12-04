@@ -1,0 +1,186 @@
+/* === GLOBAL STYLES === */
+:root {
+  --primary: #fdaa0e;
+  --primary-light: #ffd36a;
+  --primary-hover: #d98b06;
+  --loading-color: #5b95eb;
+  --text-dark: #111;
+  --text-light: #666;
+  --bg-light: #f7f7fa;
+  --white: #fff;
+  --border: #e5e5e9;
+  --radius: 10px;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  --transition: 0.25s ease;
+  --font: 'Poppins', sans-serif;
+}
+
+/* GENERAL */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f6f6fa;
+}
+
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+  font-weight: 600;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: #ffb31a;
+}
+
+.post-job {
+  background: #ffb31a;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* HEADER SECTION */
+.header-section {
+  background: var(--white);
+  box-shadow: var(--shadow);
+  padding: 3rem 0;
+  text-align: center;
+  margin-top: 2rem;
+  border-radius: var(--radius);
+}
+
+.header-section h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.company-search {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.company-search input,
+.company-search select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+
+.company-search button {
+  background: #ffb31a;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* COMPANY GRID */
+.companies {
+  padding: 20px 40px;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.company-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.company-card:hover {
+  transform: translateY(-4px);
+}
+
+.company-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.company-card h3 {
+  margin-bottom: 8px;
+}
+
+.company-card p {
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.view-jobs-btn {
+  background: #ffb31a;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #fff;
+  margin-top: 40px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+  .company-search {
+    flex-direction: column;
+  }
+
+  .company-search input,
+  .company-search select {
+    width: 100%;
+  }
+  .company-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+    

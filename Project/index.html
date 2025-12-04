@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerHub — Jobs & Careers</title>
+
+  <meta name="description" content="Search jobs, filter by type, and view company info. CareerHub job board using modern HTML, CSS and vanilla JS."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+  <header class="navbar">
+    <div class="logo">CareerHub</div>
+    <nav>
+      <a class="active" href="index.html">Home</a>
+      <a href="jobs.html">Jobs</a>
+      <a href="companies.html">Companies</a>
+      <button class="post-job">Post Job</button>
+    </nav>
+  </header>
+
+  <!-- HERO SEARCH -->
+  <section class="hero">
+    <h1>Find your next job</h1>
+    <form id="searchForm" class="search-box">
+      <input id="titleInput" type="text" placeholder="Job Title or keyword">
+      <input id="locationInput" type="text" placeholder="Location (city or country)">
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <main class="container">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <h2>Job alert</h2>
+      <p>We'll email you when new jobs match your criteria</p>
+      <input type="email" placeholder="Email">
+      <button class="alert-btn">Alert me</button>
+
+      <select>
+        <option>All types</option>
+        <option>Full-time</option>
+        <option>Part-time</option>
+        <option>Contract</option>
+      </select>
+
+      <select>
+        <option>Any experience</option>
+        <option>Junior</option>
+        <option>Mid level</option>
+        <option>Senior</option>
+      </select>
+    </aside>
+
+    <!-- JOB LIST -->
+    <section class="jobs-section">
+      <h2>Available Jobs</h2>
+
+      <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <span>Loading jobs...</span>
+      </div>
+
+      <div id="jobsContainer" class="jobs-list"></div>
+    </section>
+  </main>
+  
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 CareerHub. All rights reserved.</p>
+  </footer>
+  
+</body>
+</html>
