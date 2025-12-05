@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerHub — Companies</title>
+  <title>U-Work — Companies</title>
 
   <meta name="description" content="Search jobs, filter by type, and view company info. CareerHub job board using modern HTML, CSS and vanilla JS."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +17,12 @@
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="logo">CareerHub</div>
-    <nav>
+    <div class="logo">U-Work</div>
+
+    <!-- Hamburger Icon (Mobile) -->
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <nav id="mobileMenu">
       <a href="index.html">Home</a>
       <a href="jobs.html">Jobs</a>
       <a class="active" href="companies.html">Companies</a>
@@ -60,9 +64,31 @@
     <div id="companyGrid" class="company-grid"></div>
   </section>
 
+  <section class="stats-section">
+  <h2>Platform Statistics</h2>
+
+  <div class="stats-grid">
+    <div class="stat-box">
+      <span class="stat-number" data-target="12800">0</span>
+      <p>Followers</p>
+    </div>
+
+    <div class="stat-box">
+      <span class="stat-number" data-target="3500">0</span>
+      <p>Enrolled Companies</p>
+    </div>
+
+    <div class="stat-box">
+      <span class="stat-number" data-target="54000">0</span>
+      <p>Monthly Visitors</p>
+    </div>
+  </div>
+  </section>
+
+
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 CareerHub. All rights reserved.</p>
+    <p>© 2025 U-Work. All rights reserved.</p>
   </footer>
 
 

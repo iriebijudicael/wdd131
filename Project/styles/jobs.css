@@ -37,7 +37,7 @@ header .container {
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--text-dark);
 }
@@ -69,6 +69,14 @@ nav a {
 nav a.active {
   font-weight: bold;
   color: #ffb31a;
+}
+
+/* MOBILE MENU TOGGLE */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  user-select: none;
 }
 
 /* HERO */
@@ -110,11 +118,12 @@ nav a.active {
 /* CATEGORIES */
 .categories {
   font-weight: 500;
-  max-width: 400%;
+  /* max-width: 400%; */
   padding: 20px 40px;
+  margin: auto 1rem;
 }
 
-.categories .grid {
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
@@ -131,8 +140,9 @@ nav a.active {
 
 /* TRENDING JOBS */
 .trending {
-  max-width: 200%;
+  /* max-width: 200%; */
   padding: 20px 30px;
+  margin: 3rem;
 }
 
 .jobs-list {
@@ -192,12 +202,40 @@ nav a.active {
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
+   nav {
+    position: absolute;
+    top: 80px;
+    right: 95px;
+    background: #fff;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+  }
+
+  /* MOBILE MENU VISIBLE */
+  nav.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
   .search-box {
     flex-direction: column;
   }
 
   .search-box input {
-    width: 100%;
+    width: none;
+    margin: 1rem
   }
 }
 @media (max-width: 400px) {

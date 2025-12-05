@@ -1,10 +1,29 @@
+const menuToggle = document.getElementById("menuToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("open");
+});
+
+
 const trendingContainer = document.getElementById("homeTrendingJobs");
 
 // trending mock data
 const trendingJobs = [
-  { title: "Frontend Developer", company: "TechCorp", location: "Abidjan" },
-  { title: "UX/UI Designer", company: "Designify", location: "Remote" },
-  { title: "Backend Engineer", company: "SoftLab", location: "Yamoussoukro" }
+  { 
+    title: "Frontend Developer", 
+    company: "TechCorp", 
+    location: "Abidjan" 
+  },
+  { 
+    title: "UX/UI Designer", 
+    company: "Designify", 
+    location: "Remote" 
+  },
+  { title: "Backend Engineer", 
+    company: "SoftLab", 
+    location: "Yamoussoukro" 
+  }
 ];
 
 function loadTrendingJobs() {

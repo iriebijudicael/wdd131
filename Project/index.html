@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CareerHub — Jobs & Careers</title>
+  <title>U-Work — Jobs & Careers</title>
 
   <meta name="description" content="Search jobs, filter by type, and view company info. CareerHub job board using modern HTML, CSS and vanilla JS."/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,8 +15,12 @@
 
 <body>
   <header class="navbar">
-    <div class="logo">CareerHub</div>
-    <nav>
+    <div class="logo">U-Work</div>
+
+    <!-- Hamburger Icon (Mobile) -->
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <nav id="mobileMenu">
       <a class="active" href="index.html">Home</a>
       <a href="jobs.html">Jobs</a>
       <a href="companies.html">Companies</a>
@@ -34,7 +38,7 @@
     </form>
   </section>
 
-  <main class="container">
+  <main id="container">
     <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
       <h2>Job alert</h2>
@@ -72,7 +76,7 @@
   
   <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 CareerHub. All rights reserved.</p>
+    <p>© 2025 U-Work. All rights reserved.</p>
   </footer>
   
 </body>
