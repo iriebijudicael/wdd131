@@ -47,11 +47,15 @@ header {
 
 nav a {
   font-weight: 600;
+  text-decoration: none;
   margin-right: 20px;
   text-decoration: none;
   color: #333;
+  padding: 10px;
 }
-
+li {
+    list-style: none;
+  }
 nav a:hover {
   border-bottom: 2px solid #ffb31a;
 }
@@ -94,7 +98,8 @@ nav a.active {
 .search-box {
   display: flex;
   justify-content: space-around;
-  gap: 10px;
+  align-items: center;
+  gap: 5px;
   margin-top: 20px;
 }
 
@@ -193,9 +198,35 @@ nav a.active {
 /* FOOTER */
 .footer {
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   background: #fff;
   margin-top: 40px;
+}
+footer .logo {
+  font-size: 0.9rem;
+}
+.resources {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-links{
+  display: grid;
+  flex-direction: column;
+  padding: 0;
+  text-align: left;
+}
+.footer-links a {
+  font-weight: 600;
+  color: #111;
+  text-decoration: none;
+  display: block;
+  margin: 2px 0;
+}
+footer p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 1rem;
 }
 
 /* RESPONSIVE */
@@ -215,6 +246,13 @@ nav a.active {
     pointer-events: none;
     transform: translateY(-10px);
     transition: 0.3s ease;
+  }
+  nav a {
+    display: block;
+    padding: 10px;
+  }
+  nav a:hover {
+    border-bottom: none;
   }
 
   /* MOBILE MENU VISIBLE */
@@ -239,14 +277,9 @@ nav a.active {
 @media (max-width: 400px) {
   .navbar {
     display: flex;
-    flex-direction: column;
-    /* align-items: flex-start; */
+    align-items: flex-start;
   }
 
-  nav a {
-    /* display: flex; */
-    margin: 0;
-    /* margin-bottom: 10px; */
-  }
+  
 }
 
