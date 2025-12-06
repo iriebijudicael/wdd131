@@ -13,16 +13,19 @@ const trendingJobs = [
   { 
     title: "Frontend Developer", 
     company: "TechCorp", 
-    location: "Abidjan" 
+    location: "Abidjan", 
+    description: "Build responsive and accessible web interfaces using HTML, CSS, and JavaScript. Collaborate with designers and backend developers to improve UI/UX performance."
   },
   { 
     title: "UX/UI Designer", 
     company: "Designify", 
-    location: "Remote" 
+    location: "Remote",
+    description: "Create user-centered designs for web and mobile platforms. Work closely with developers to implement modern UI trends."
   },
   { title: "Backend Engineer", 
     company: "SoftLab", 
-    location: "Yamoussoukro" 
+    location: "Yamoussoukro",
+    description: "Design and build scalable APIs with Node.js. Optimize performance, ensure data security, and collaborate with cross-functional teams."
   }
 ];
 
@@ -34,6 +37,7 @@ function loadTrendingJobs() {
     card.innerHTML = `
       <h3>${job.title}</h3>
       <p>${job.company} — ${job.location}</p>
+      <p>${job.description}</p>
       <button>Apply Now</button>
     `;
 
@@ -42,3 +46,4 @@ function loadTrendingJobs() {
 }
 
 loadTrendingJobs();
+

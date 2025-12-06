@@ -29,12 +29,6 @@ header {
   top: 0;
   z-index: 1000;
 }
-header .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0;
-}
 
 .logo {
   font-size: 1.2rem;
@@ -56,6 +50,10 @@ nav a {
   margin-right: 20px;
   text-decoration: none;
   color: #333;
+}
+
+nav a:hover {
+  border-bottom: 2px solid #ffb31a;
 }
 
 .post-job {
@@ -90,12 +88,12 @@ nav a.active {
 }
 
 .hero h1 {
-  font-size: 36px;
+  font-size: 1.5rem;
 }
 
 .search-box {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 10px;
   margin-top: 20px;
 }
@@ -126,7 +124,7 @@ nav a.active {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  gap: 1rem;
   margin-top: 20px;
 }
 
@@ -240,12 +238,15 @@ nav a.active {
 }
 @media (max-width: 400px) {
   .navbar {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
   }
 
   nav a {
-    margin-right: 0;
-    margin-bottom: 10px;
+    /* display: flex; */
+    margin: 0;
+    /* margin-bottom: 10px; */
   }
 }
+
