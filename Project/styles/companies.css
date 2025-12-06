@@ -238,6 +238,16 @@ nav a.active {
   color: #444;
 }
 
+.lazy-img {
+  filter: blur(6px);
+  transition: filter .4s ease-out;
+}
+
+.lazy-img:not([src*="data:"]) {
+  filter: blur(0);
+}
+
+
 /* MOBILE MENU TOGGLE */
 .menu-toggle {
   display: none;

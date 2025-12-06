@@ -5,7 +5,6 @@ menuToggle.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
 });
 
-
 const companies = [
   {
     name: "TechCorp",
@@ -41,38 +40,52 @@ const companies = [
     location: "Chicago, IL",
     logoUrl: "https://media.licdn.com/dms/image/sync/v2/D4E27AQFf7WXTR9vvUw/articleshare-shrink_800/B4EZrakTceGUAI-/0/1764603541654?e=2147483647&v=beta&t=nSEmSwySuai12scXpDo64CcfZvzR8G8INoK8ssSg_HA",
     jobs: 9
-    },
-    {
+  },
+  {
     name: "DataWorks Inc.",
     industry: "Data Science",
     location: "Seattle, WA",
     logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLckaUVqZxfY6Iu5vr4HHE18aKX--X_1zXAQ&s",
     jobs: 11
-    },
-    {
+  },
+  {
     name: "InfraTech Solutions",
     industry: "DevOps",
     location: "Denver, CO",
     logoUrl: "https://www.infra-tech.be/wp-content/uploads/INFRATECH_logo2021_couleurs_327x140.png",
     jobs: 4
-    },
-    {
+  },
+  {
     name: "InnovateX",
     industry: "Product Management",
     location: "Boston, MA",
     logoUrl: "https://file.aiquickdraw.com/imgcompressed/img/compressed_7fdd2f9d001906e3a2e04721c27a0bbd.webp",
     jobs: 8
-    },
-    {
+  },
+  {
     name: "Google Tech",
     industry: "Tech",
     location: "Mountain View, CA",
     logoUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKqhrpyiPo_hqQ42khSzMSiKfyZiFEtA1UIw&s",
     jobs: 20
-    },
+  },
 ];
 
 const grid = document.getElementById("companyGrid");
+
+// LAZY LOADING OBSERVER
+const lazyObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+
+    const img = entry.target;
+    img.src = img.dataset.src;
+
+    img.onload = () => img.classList.remove("lazy-img");
+
+    observer.unobserve(img);
+  });
+}, { threshold: 0.2 });
 
 function renderCompanies(list) {
   grid.innerHTML = "";
@@ -82,7 +95,7 @@ function renderCompanies(list) {
     card.classList.add("company-card");
 
     card.innerHTML = `
-      <img src="${c.logoUrl}" class="company-logo" alt="logo">
+      <img data-src="${c.logoUrl}" class="company-logo lazy-img" alt="${c.name}">
       <h3>${c.name}</h3>
       <p>${c.industry} — ${c.location}</p>
       <button class="view-jobs-btn">View ${c.jobs} Jobs</button>
@@ -90,11 +103,14 @@ function renderCompanies(list) {
 
     grid.appendChild(card);
   });
+
+  // Observe lazy images
+  document.querySelectorAll(".lazy-img").forEach(img => lazyObserver.observe(img));
 }
 
 renderCompanies(companies);
 
-// SEARCH & FILTER LOGIC
+// SEARCH FILTER
 document.getElementById("searchBtn").addEventListener("click", () => {
   const name = document.getElementById("searchCompany").value.toLowerCase();
   const industry = document.getElementById("filterIndustry").value;
@@ -109,13 +125,14 @@ document.getElementById("searchBtn").addEventListener("click", () => {
   renderCompanies(filtered);
 });
 
+// Stats Animation
 function animateStats() {
   const stats = document.querySelectorAll(".stat-number");
 
   stats.forEach(stat => {
     const target = +stat.getAttribute("data-target");
     let count = 0;
-    const speed = target / 200; // Animation speed
+    const speed = target / 200;
 
     const updateCount = () => {
       if (count < target) {
@@ -130,7 +147,4 @@ function animateStats() {
     updateCount();
   });
 }
-
-// Trigger animation when section is visible
 document.addEventListener("DOMContentLoaded", animateStats);
-

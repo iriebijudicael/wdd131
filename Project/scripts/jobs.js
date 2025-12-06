@@ -1,3 +1,4 @@
+// --- MOBILE MENU ---
 const menuToggle = document.getElementById("menuToggle");
 const mobileMenu = document.getElementById("mobileMenu");
 
@@ -6,29 +7,50 @@ menuToggle.addEventListener("click", () => {
 });
 
 
-const trendingContainer = document.getElementById("homeTrendingJobs");
+// --- LAZY LOAD IMAGES USING INTERSECTION OBSERVER ---
+const lazyImages = document.querySelectorAll("img.lazy");
 
-// trending mock data
+const imageObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      img.src = img.dataset.src;   // Load real image
+      img.classList.add("lazy-loaded");
+      obs.unobserve(img);
+    }
+  });
+});
+
+lazyImages.forEach(img => imageObserver.observe(img));
+
+
+
+// --- TRENDING JOBS DATA ---
 const trendingJobs = [
   { 
     title: "Frontend Developer", 
     company: "TechCorp", 
     location: "Abidjan", 
-    description: "Build responsive and accessible web interfaces using HTML, CSS, and JavaScript. Collaborate with designers and backend developers to improve UI/UX performance."
+    description: "Build responsive and accessible web interfaces using HTML, CSS, and JavaScript."
   },
   { 
     title: "UX/UI Designer", 
     company: "Designify", 
     location: "Remote",
-    description: "Create user-centered designs for web and mobile platforms. Work closely with developers to implement modern UI trends."
+    description: "Create user-centered designs for web and mobile platforms."
   },
-  { title: "Backend Engineer", 
+  { 
+    title: "Backend Engineer", 
     company: "SoftLab", 
     location: "Yamoussoukro",
-    description: "Design and build scalable APIs with Node.js. Optimize performance, ensure data security, and collaborate with cross-functional teams."
+    description: "Design and build scalable APIs with Node.js."
   }
 ];
 
+const trendingContainer = document.getElementById("homeTrendingJobs");
+
+
+// --- LOAD TRENDING JOBS ---
 function loadTrendingJobs() {
   trendingJobs.forEach(job => {
     const card = document.createElement("div");
@@ -42,8 +64,21 @@ function loadTrendingJobs() {
     `;
 
     trendingContainer.appendChild(card);
+
+    // Animate card
+    setTimeout(() => card.classList.add("loaded"), 100);
   });
 }
 
-loadTrendingJobs();
 
+// --- LAZY LOAD TRENDING JOBS WHEN VISIBLE ---
+const trendingObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      loadTrendingJobs();
+      obs.unobserve(entry.target);
+    }
+  });
+});
+
+trendingObserver.observe(trendingContainer);
