@@ -139,6 +139,11 @@ nav a.active {
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  cursor: pointer;
+}
+.category-card:hover {
+  border: 2px solid #ffb31a;
+  padding: 10px;
 }
 
 /* TRENDING JOBS */
