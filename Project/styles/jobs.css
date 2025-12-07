@@ -121,8 +121,8 @@ nav a.active {
 /* CATEGORIES */
 .categories {
   font-weight: 500;
-  /* max-width: 400%; */
-  padding: 20px 40px;
+  max-width: 400%;
+  padding: 20px 50px;
   margin: auto 1rem;
 }
 
@@ -195,8 +195,8 @@ nav a.active {
 }
 
 .company-card img {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
 }
 
@@ -277,6 +277,20 @@ footer p {
   .search-box input {
     width: none;
     margin: 1rem
+  }
+  .categories {
+    padding: 8px;
+  }
+  .trending {
+    padding: 8px;
+  }
+  .company-grid {
+   
+    padding: 5px;
+  }
+
+  .company-card {
+    padding: none;
   }
 }
 @media (max-width: 400px) {
