@@ -26,7 +26,39 @@
           <a class="active" href="index.html">Home</a>
           <a href="jobs.html">Jobs</a>
           <a href="companies.html">Companies</a>
-          <button class="post-job">Post Job</button>
+          <button id="postJob">Post Job</button>
+          
+          <!-- POST JOB DIALOG -->
+          <dialog id="postJobDialog" class="postjob-dialog">
+            <form method="get" id="postJobForm" action="review.html">
+              <h2>Post a New Job</h2>
+    
+              <button class="close-button">❌</button>
+              <label>Job Title</label>
+              <input type="text" id="jobTitle" required />
+
+              <label>Company Name</label>
+              <input type="text" id="jobCompany" required />
+
+              <label>Location</label>
+              <input type="text" id="jobLocation" required />
+
+              <label>Job Type</label>
+              <select id="jobType" required>
+                <option value="Full-time">Full-time</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Contract">Contract</option>
+                <option value="Remote">Remote</option>
+                <option value="Internship">Internship</option>
+              </select>
+
+              <div class="dialog-buttons">
+                <!-- <button value="cancel" class="cancel-btn">Cancel</button> -->
+                <button value="confirm" class="submit-btn">Post Job</button>
+              </div>
+            </form>
+          </dialog>
+
         </li>
       </ul>
       

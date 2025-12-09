@@ -60,7 +60,7 @@ nav a:hover {
   border-bottom: 2px solid #ffb31a;
 }
 
-.post-job {
+#postJob {
   background: #ffb31a;
   border: none;
   padding: 8px 20px;
@@ -232,6 +232,78 @@ footer p {
   font-size: 0.9rem;
   font-weight: 600;
   margin-top: 1rem;
+}
+
+
+/* DIALOG STYLING */
+.postjob-dialog {
+  padding: 25px;
+  border: none;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 420px;
+  background: #ffffff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.postjob-dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.postjob-dialog h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: #222;
+}
+
+/* INPUTS */
+.postjob-dialog input,
+.postjob-dialog select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer; 
+}
+
+/* BUTTONS */
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.cancel-btn {
+  padding: 8px 14px;
+  background: #e5e7eb;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  padding: 8px 14px;
+  background: #ffb31a;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* BACKDROP */
+::backdrop {
+  background: rgba(0,0,0,0.55);
 }
 
 /* RESPONSIVE */

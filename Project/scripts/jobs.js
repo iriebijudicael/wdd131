@@ -82,3 +82,67 @@ const trendingObserver = new IntersectionObserver((entries, obs) => {
 });
 
 trendingObserver.observe(trendingContainer);
+
+
+
+// ------------------------------
+// POST JOB DIALOG LOGIC
+// ------------------------------
+
+// Elements
+const postJobDialog = document.getElementById("postJobDialog");
+const postJobForm = document.getElementById("postJobForm");
+const openPostJobBtn = document.querySelector("#postJob"); 
+const closeDialogBtn = document.querySelector("#postJobDialog .close-button");
+
+// Open dialog
+openPostJobBtn.addEventListener("click", () => {
+  postJobDialog.showModal();
+});
+
+// Close dialog (❌ button)
+closeDialogBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent form reset
+  postJobDialog.close();
+});
+
+// Handle form submission
+postJobForm.addEventListener("submit", (e) => {
+  // Only validate form fields – NOT the close button
+  if (!postJobForm.reportValidity()) {
+    e.preventDefault();
+    return;
+  }
+
+  // If valid, allow normal GET action to "review.html"
+});
+
+
+// ------------------------------
+const jobList = document.getElementById("jobList");
+
+// Get stored jobs
+const savedJobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+function displayJobs() {
+  if (savedJobs.length === 0) {
+    jobList.innerHTML = "<p>No jobs posted yet.</p>";
+    return;
+  }
+
+  savedJobs.forEach(job => {
+    const card = document.createElement("div");
+    card.className = "job-card";
+
+    card.innerHTML = `
+      <h3>${job.title}</h3>
+      <p>${job.company} — ${job.location}</p>
+      <p>Type: ${job.type}</p>
+      <button>Apply Now</button>
+    `;
+
+    jobList.appendChild(card);
+  });
+}
+
+displayJobs();
